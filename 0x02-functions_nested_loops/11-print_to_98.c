@@ -9,56 +9,28 @@
 void print_to_98(int n)
 {
 
-	int k = 98, i;
+	int i;
 
-	if (n < k)
-		for (i = n; i <= k; i++)
+	if (n < 98)
+		for (i = n; i <= 98; i++)
 		{
-			if (i <= -100)
-			{
-				_putchar('-');
-				_putchar(i / 100 + '0');
-				_putchar((i / 10) % 10 + '0');
-				_putchar(i % 10 + '0');
-			}
-			else if (i >= -10 && i < 0 )
-				_putchar(n / 100 + '0');
-			if (i >= 0 && i <= 9)
-				_putchar(i + '0');
-
-			_putchar(i / 10 + '0');
-			_putchar(i % 10 + '0');
-
-			if (i != k)
-			{
-				_putchar(',');
-				_putchar(' ');
-			}
+			if (i < 98)
+				printf("%i, ", i);
+			else
+				printf("%i\n", i);
 
 		}
-	_putchar('\n');
-
-	if (n > k)
-		for (i = n; i >= k; i--)
+	if (n > 98)
+		for (i = n; i >= 98; i--)
 		{
-			_putchar(i / 10 + '0');
-			_putchar(i % 10 + '0');
-			if (i >= 100)
-				_putchar(i % 100 + '0');
-
-			if (i != k)
-			{
-				_putchar(',');
-				_putchar(' ');
-			}
-
+			if (i != 98)
+				printf("%i, ", i);
+			else
+				printf("%i\n", i);
 		}
-	_putchar('\n');
 
-	if (n == k)
-	{
-		_putchar(i / 10 + '0');
-		_putchar(i % 10 + '0');
-		_putchar('\n');
-	}
+
+	if (n == 98)
+                printf("%i\n", n);
+
 }
