@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * print_number - prints numbers recursively
+ * print_number - prints numbers
  *
  * @n: number to be printed
  */
