@@ -12,14 +12,22 @@ char *rot13(char *c)
 
 {
 
-	int i;
+	int i, flag, j;
+
+	char upper1[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghigklmnopqrstuvwxyz";
+	char upper2[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 	for (i = 0; c[i] != '\0'; i++)
 	{
-		if ((c[i] >= 65 && c[i] <= 77) || (c[i] >= 97 && c[i] <= 109))
-			c[i] = c[i] + 13;
-		if ((c[i] >= 78 && c[i] <= 90) || (c[i] >= 110 && c[i] <= 122))
-			c[i] = c[i] - 13;
+		flag = 0;
+		for (j = 0; upper1[j] != '\0'; j++)
+		{
+			if (c[i] == upper1[j] && flag == 0)
+			{
+				c[i] = upper2[j];
+				flag = 1;
+			}
+		}
 	}
 
 	return (c);
