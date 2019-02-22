@@ -12,19 +12,7 @@
 int _strcmp(char *s1, char *s2)
 {
 
-	int first, second, n;
-
-	first = _strlen(s1);
-	second = _strlen(s2);
-
-	if (first < second)
-		n = -15;
-	if (first > second)
-		n = 15;
-	if (first == second)
-		n = 0;
-
-	return (n);
+	return (_strlen(s1) - _strlen(s2));
 }
 
 /**
