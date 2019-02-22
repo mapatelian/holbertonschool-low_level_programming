@@ -11,10 +11,7 @@
 
 int _strcmp(char *s1, char *s2)
 {
-	if(s1 != s2)
-		return (_strlen(s1) - _strlen(s2));
-	else
-		return (0);
+	return (_strlen(s1) - _strlen(s2));
 }
 
 /**
