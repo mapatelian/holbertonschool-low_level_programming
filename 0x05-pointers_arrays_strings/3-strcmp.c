@@ -19,9 +19,9 @@ int _strcmp(char *s1, char *s2)
 
 	if (first < second)
 		n = -15;
-	else if (first > second)
+	if (first > second)
 		n = 15;
-	else
+	if (first == second)
 		n = 0;
 
 	return (n);
