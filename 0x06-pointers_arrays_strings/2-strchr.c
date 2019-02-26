@@ -23,6 +23,6 @@ int i;
 	if (s[i] == '\0')
 		return (&s[i]);
 
-	return (0);
+	return (NULL);
 
 }
