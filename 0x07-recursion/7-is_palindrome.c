@@ -34,7 +34,7 @@ int _strlen_recursion(char *s)
 /**
  * palcheck - checks if the elements of the string are even
  *
- * @s: pointer to a string
+ * @s1: pointer to a string
  * @i: first element of the string
  * @len: last element of the string
  *
@@ -43,9 +43,9 @@ int _strlen_recursion(char *s)
 
 int palcheck(char *s1, int i, int len)
 {
-	if (s1[i] == s1[len])
-		return (1);
 	if (s1[i] != s1[len])
 		return (0);
+	if (s1[i] >= s1[len])
+		return (1);
 	return (palcheck(s1, i + 1, len - 1));
 }
