@@ -13,11 +13,6 @@ int main(int argc, char *argv[])
 {
 	int i, result = 0;
 
-	if (argc == 1)
-		printf("0\n");
-
-else
-{
 	for (i = 1; i < argc; i++)
 	{
 		if (*argv[i] > 57 || *argv[i] < 48)
@@ -30,6 +25,4 @@ else
 	}
 	printf("%d\n", result);
 	return (EXIT_SUCCESS);
-}
-return (1);
 }
