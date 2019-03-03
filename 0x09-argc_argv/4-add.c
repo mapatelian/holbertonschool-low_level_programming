@@ -20,7 +20,7 @@ else
 {
 	for (i = 1; i < argc; i++)
 	{
-		if (*argv[i] > 57)
+		if (*argv[i] > 57 || *argv[i] < 48)
 		{
 			printf("Error\n");
 			return (1);
