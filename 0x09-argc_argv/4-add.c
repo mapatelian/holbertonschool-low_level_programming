@@ -20,9 +20,6 @@ else
 {
 	for (i = 1; i < argc; i++)
 	{
-		if (*argv[i] == '-')
-			return (1);
-
 		if (*argv[i] > 57)
 		{
 			printf("Error\n");
