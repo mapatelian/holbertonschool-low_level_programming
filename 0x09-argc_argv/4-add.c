@@ -15,21 +15,24 @@ int main(int argc, char *argv[])
 
 	if (argc == 1)
 		printf("0\n");
-	else
-	{
-		for (i = 1; i < argc; i++)
-		{
-			if (*argv[i] > 57)
-			{
-				printf("Error\n");
-				return (1);
-			}
-			if (*argv[i] == '-')
-				return (1);
 
-			result = result + atoi(argv[i]);
+else
+{
+	for (i = 1; i < argc; i++)
+	{
+		if (*argv[i] == '-')
+			return (1);
+
+		if (*argv[i] > 57)
+		{
+			printf("Error\n");
+			return (1);
 		}
-		printf("%d\n", result);
+
+		result = result + atoi(argv[i]);
 	}
+	printf("%d\n", result);
 	return (EXIT_SUCCESS);
+}
+return (1);
 }
