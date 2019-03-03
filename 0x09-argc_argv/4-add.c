@@ -31,4 +31,5 @@ else
 	printf("%d\n", result);
 	return (EXIT_SUCCESS);
 }
+return (1);
 }
