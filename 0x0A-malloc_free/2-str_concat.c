@@ -17,7 +17,7 @@ char *str_concat(char *s1, char *s2)
 	first = _strlen_recursion(s1);
 	second = _strlen_recursion(s2);
 
-	if (!*s1 || !*s2)
+	if (s1 == NULL && s2 == NULL)
 		return (NULL);
 
 	new = malloc(sizeof(char) * (first + second + 1));
@@ -40,6 +40,7 @@ char *str_concat(char *s1, char *s2)
 		i++;
 	}
 	new[i] = '\0';
+
 
 	return (new);
 
