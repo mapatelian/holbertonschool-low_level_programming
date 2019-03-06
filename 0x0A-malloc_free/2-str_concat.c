@@ -14,11 +14,10 @@ char *str_concat(char *s1, char *s2)
 	char *new;
 	int i, k, first, second;
 
-	first = _strlen_recursion(s1);
-	second = _strlen_recursion(s2);
-
-	if (s1 == NULL && s2 == NULL)
-		return (NULL);
+	if (s1)
+		first = _strlen_recursion(s1);
+	if (s2)
+		second = _strlen_recursion(s2);
 
 	new = malloc(sizeof(char) * (first + second + 1));
 
