@@ -16,8 +16,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int second, k;
 	char *copy;
 
-	if (!s1 && !s2)
-		return (NULL);
 	if (s1)
 		for (first = 0; s1[first]; first++)
 		;
