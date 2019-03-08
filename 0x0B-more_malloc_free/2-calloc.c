@@ -15,16 +15,17 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	unsigned int i;
 
 	if (nmemb == 0 || size == 0)
-		return (0);
+		exit (98);
 
-	new = malloc(sizeof(size) * (nmemb));
-	if (!new)
-		return (NULL);
+	else
+	{
+		new = malloc(sizeof(size) * (nmemb));
+		if (!new)
+			return (NULL);
+	}
 
 	for (i = 0; i < nmemb; i++)
 		new[i] = 0;
-
-	new[i] = '\0';
 
 	return (new);
 }
