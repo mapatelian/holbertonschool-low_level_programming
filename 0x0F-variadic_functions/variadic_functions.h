@@ -6,6 +6,12 @@
 #include <stdlib.h>
 #include <string.h>
 
+/**
+ * struct op - holds struct of parameters and functions
+ * @s: parameters
+ * @f: function pointer
+ */
+
 typedef struct op
 {
 	char s;
