@@ -15,6 +15,12 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	va_start(valist, n);
 
+	if (!n)
+	{
+		printf("\n");
+		return;
+	}
+
 	for (i = 0; i < n; i++)
 	{
 		string = va_arg(valist, char*);
