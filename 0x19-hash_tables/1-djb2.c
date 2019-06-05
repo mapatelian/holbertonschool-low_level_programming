@@ -3,6 +3,8 @@
 /**
  * hash_djb2 - function to map data
  *
+ * @str: pointer to a string to be hashed
+ *
  * Return: hash value
  */
 
