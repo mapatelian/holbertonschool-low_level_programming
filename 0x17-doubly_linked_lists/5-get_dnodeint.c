@@ -11,27 +11,30 @@
 
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
-	unsigned int i = 0, lenght = 0;
+	unsigned int i = 1, lenght = 0;
 	dlistint_t *copy;
 
-	copy = head;
-
-	while (copy)
+	if (head)
 	{
-		lenght++;
-		copy = copy->next;
-	}
+		copy = head;
 
-	if (index < lenght)
-	{
-		while (i < index)
+		while (copy)
 		{
-			head = head->next;
-			i++;
+			lenght++;
+			copy = copy->next;
 		}
 
-		return (head);
+		if (index <= lenght)
+		{
+			while (i < index)
+			{
+				head = head->next;
+				i++;
+			}
+
+			return (head);
+		}
+		return (NULL);
 	}
-	else
-		exit (0);
+	return (NULL);
 }
