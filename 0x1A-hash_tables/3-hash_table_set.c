@@ -4,7 +4,7 @@
  * add_node_end - adds a new node at the end of a linked list
  *
  * @h: pointer to a head of the list
- * @key: key
+ * @key: key to be inserted
  * @value: value of the key
  *
  * Return: address of the new element if succesed, NULL othervise
@@ -21,7 +21,8 @@ hash_node_t *add_node_end(hash_node_t **h, const char *key, const char *value)
 	if (!new)
 	{
 		free(new);
-		return (NULL);
+		fprintf(stderr, "failed");
+		return (0);
 	}
 
 	new->key = (char *)key;
@@ -43,11 +44,12 @@ hash_node_t *add_node_end(hash_node_t **h, const char *key, const char *value)
 	return (new);
 }
 
+
 /**
  * add_node - adds a node to the beginning of the list
  *
- * @head: pointer to the head of the list
- * @key: key
+ * @head: pointer to a head of the list
+ * @key: key to be inserted
  * @value: value of the key
  *
  * Return: pointer to a new node
@@ -58,10 +60,10 @@ hash_node_t *add_node(hash_node_t **head, const char *key, const char *value)
 	hash_node_t *new;
 
 	new = malloc(sizeof(hash_node_t));
-
 	if (!new)
 	{
 		free(new);
+		fprintf(stderr, "failed");
 		return (0);
 	}
 
@@ -71,6 +73,7 @@ hash_node_t *add_node(hash_node_t **head, const char *key, const char *value)
 	if (new->value == NULL)
 	{
 		free(new);
+		fprintf(stderr, "failed");
 		return (0);
 	}
 
@@ -95,7 +98,7 @@ char *_strdup(char *str)
 	int lenght = 0;
 
 	if (str == NULL)
-		return (NULL);
+		return (0);
 
 	while (str[lenght])
 		lenght++;
@@ -103,7 +106,10 @@ char *_strdup(char *str)
 	copy = malloc(sizeof(char) * (lenght + 1));
 
 	if (copy == NULL)
-		return (NULL);
+	{
+		fprintf(stderr, "failed");
+		return (0);
+	}
 
 	while (i < lenght)
 	{
@@ -113,16 +119,6 @@ char *_strdup(char *str)
 	copy[i] = '\0';
 	return (copy);
 }
-
-/**
- * hash_table_set - adds an element to the hash table
- *
- * @ht: pointer to the hash table to be modified
- * @key: key
- * @value: value of the key
- *
- * Return: 1 if succeded, 0 if failed
- */
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
