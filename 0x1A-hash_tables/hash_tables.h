@@ -42,7 +42,11 @@ char *hash_table_get(const hash_table_t *ht, const char *key);
 void hash_table_print(const hash_table_t *ht);
 void hash_table_delete(hash_table_t *ht);
 char *_strdup(char *str);
-hash_node_t *add_node(hash_node_t **head, const char *key, const char *value);
+void add_node(hash_node_t **head, const char *key, const char *value);
 hash_node_t *add_node_end(hash_node_t **h, const char *key, const char *value);
+void print_list(hash_node_t **h);
+int _strncmpr(char *str1, const char *str2);
+int _strlen(char *string);
+void update_node(hash_node_t **node, const char *value);
 
 #endif
