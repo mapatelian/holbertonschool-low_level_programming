@@ -48,5 +48,6 @@ void print_list(hash_node_t **h);
 int _strncmpr(char *str1, const char *str2);
 int _strlen(char *string);
 void update_node(hash_node_t **node, const char *value);
+size_t list_len(hash_node_t *h);
 
 #endif
