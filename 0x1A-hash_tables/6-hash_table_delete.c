@@ -1,9 +1,9 @@
 #include "hash_tables.h"
 
 /**
- * list_len - checks how many elements in a linked list
+ * hash_table_delete - deletes (frees) nodes
  *
- * @h: pointer to a head of the list
+ * @ht: pointer to a head of the list
  *
  * Return: number of elements
  */
