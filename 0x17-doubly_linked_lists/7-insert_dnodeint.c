@@ -38,6 +38,8 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	tmp = copy = *h;
 
 	len = lenght(tmp);
+	if (idx > len)
+		idx = len;
 
 	if (copy)
 	{
